@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-!rx+$4$k=&vn1-gq@@zqe_-fd_^nqrvsaw*5r3&%h+(+der*6q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-jordankingv-handmadehav-5oe5z8e6l85.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['8000-jordankingv-handmadehav-xt6hv4k2m38.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'django_todo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'todo', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
